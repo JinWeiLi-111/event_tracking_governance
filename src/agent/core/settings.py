@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing_extensions import runtime
 
 
 @dataclass(slots=True)
@@ -38,3 +39,4 @@ class AgentSettings:
             default_values=payload.get("default_values", {}),
             required_fields=payload.get("required_fields", []),
         )
+        

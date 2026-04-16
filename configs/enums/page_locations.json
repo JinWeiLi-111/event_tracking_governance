@@ -5,232 +5,303 @@
     "values" : [
     {
         "location_name" : "APP_C",
+        "cn_name" : "C",
         "children": [
             {
-                "location_name" : "个人雇主B"
+                "location_name" : "个人雇主B",
+                "cn_name" : "C_个人雇主B"
             },
             {
-                "location_name" : "首善"
+                "location_name" : "首善",
+                "cn_name" : "C_首善"
             },
             {
                 "location_name" : "公共组件",
+                "cn_name" : "C_公共组件",
                 "children" : [
                     {
-                        "location_name" : "商详页"
+                        "location_name" : "商详页",
+                        "cn_name" : "C_公共组件_商详页"
                     },
                     {
-                        "location_name" : "AI求职助手-直闪闪"
+                        "location_name" : "AI求职助手-直闪闪",
+                        "cn_name" : "C_公共组件_AI求职助手_直闪闪"
                     },
                     {
-                        "location_name" : "直播间"
+                        "location_name" : "直播间",
+                        "cn_name" : "C_公共组件_直播间"
                     },
                     {
-                        "location_name" : "push"
+                        "location_name" : "push",
+                        "cn_name" : "C_公共组件_push"
                     },
                     {
-                        "location_name" : "运营类卡片"
+                        "location_name" : "运营类卡片",
+                        "cn_name" : "C_公共组件_运营类卡片"
                     },
                     {
-                        "location_name" : "弹窗"
+                        "location_name" : "弹窗",
+                        "cn_name" : "C_公共组件_弹窗"
                     },
                     {
-                        "location_name" : "确认支付"
+                        "location_name" : "确认支付",
+                        "cn_name" : "C_公共组件_确认支付"
                     }
                 ]
             },
             {
                 "location_name" : "我的",
+                "cn_name" : "C_我的",
                 "children" : [
                     {
                         "location_name" : "其他功能",
+                        "cn_name" : "C_我的_其他功能",
                         "children" : [
                             {
-                                "location_name" : "高C数据周报"
+                                "location_name" : "高C数据周报",
+                                "cn_name" : "C_我的_其他功能_高C数据周报"
                             },
                             {
-                                "location_name" : "模拟面试"
+                                "location_name" : "模拟面试",
+                                "cn_name" : "C_我的_其他功能_模拟面试"
                             },
                             {
-                                "location_name" : "薪酬查询"
+                                "location_name" : "薪酬查询",
+                                "cn_name" : "C_我的_其他功能_薪酬查询"
                             },
                             {
-                                "location_name" : "个人主页"
+                                "location_name" : "个人主页",
+                                "cn_name" : "C_我的_其他功能_个人主页"
                             },
                             {
-                                "location_name" : "关于"
+                                "location_name" : "关于",
+                                "cn_name" : "C_我的_其他功能_关于"
                             },
                             {
-                                "location_name" : "直直公益"
+                                "location_name" : "直直公益",
+                                "cn_name" : "C_我的_其他功能_直直公益"
                             },
                             {
-                                "location_name" : "精选公司"
+                                "location_name" : "精选公司",
+                                "cn_name" : "C_我的_其他功能_精选公司"
                             },
                             {
-                                "location_name" : "隐私规则"
+                                "location_name" : "隐私规则",
+                                "cn_name" : "C_我的_其他功能_隐私规则"
                             },
                             {
-                                "location_name" : "防骗指南"
+                                "location_name" : "防骗指南",
+                                "cn_name" : "C_我的_其他功能_防骗指南"
                             },
                             {
-                                "location_name" : "我的客服"
+                                "location_name" : "我的客服",
+                                "cn_name" : "C_我的_其他功能_我的客服"
                             },
                             {
-                                "location_name" : "仲裁厅"
+                                "location_name" : "仲裁厅",
+                                "cn_name" : "C_我的_其他功能_仲裁厅"
                             },
                             {
-                                "location_name" : "规则中心"
+                                "location_name" : "规则中心",
+                                "cn_name" : "C_我的_其他功能_规则中心"
                             },
                             {
-                                "location_name" : "职业测评"
+                                "location_name" : "职业测评",
+                                "cn_name" : "C_我的_其他功能_职业测评"
                             },
                             {
-                                "location_name" : "笔试精选"
+                                "location_name" : "笔试精选",
+                                "cn_name" : "C_我的_其他功能_笔试精选"
                             }
                         ]
                     },
                     {
                         "location_name" : "常用功能",
+                        "cn_name" : "C_我的_常用功能",
                         "children" : [
                             {
-                                "location_name" : "道具商城"
+                                "location_name" : "道具商城",
+                                "cn_name" : "C_我的_常用功能_道具商城"
                             },
                             {
-                                "location_name" : "求职期望"
+                                "location_name" : "求职期望",
+                                "cn_name" : "C_我的_常用功能_求职期望"
                             },
                             {
-                                "location_name" : "附件简历"
+                                "location_name" : "附件简历",
+                                "cn_name" : "C_我的_常用功能_附件简历"
                             },
                             {
-                                "location_name" : "在线简历"
+                                "location_name" : "在线简历",
+                                "cn_name" : "C_我的_常用功能_在线简历"
                             }
                         ]
                     },
                     {
                         "location_name" : "VIP区域",
+                        "cn_name" : "C_我的_VIP区域",
                         "children" : [
                             {
-                                "location_name" : "简历定制"
+                                "location_name" : "简历定制",
+                                "cn_name" : "C_我的_VIP区域_简历定制"
                             },
                             {
-                                "location_name" : "简历优化"
+                                "location_name" : "简历优化",
+                                "cn_name" : "C_我的_VIP区域_简历优化"
                             },
                             {
-                                "location_name" : "牛人VIP"
+                                "location_name" : "牛人VIP",
+                                "cn_name" : "C_我的_VIP区域_牛人VIP"
                             }
                         ]
                     },
                     {
-                        "location_name" : "收藏"
+                        "location_name" : "收藏",
+                        "cn_name" : "C_我的_收藏"
                     },
                     {
-                        "location_name" : "面试日程"
+                        "location_name" : "面试日程",
+                        "cn_name" : "C_我的_面试日程"
                     },
                     {
-                        "location_name" : "求职记录"
+                        "location_name" : "求职记录",
+                        "cn_name" : "C_我的_求职记录"
                     },
                     {
                         "location_name" : "设置",
+                        "cn_name" : "C_我的_设置",
                         "children" :[
                             {
-                                "location_name" : "面试设置"
+                                "location_name" : "面试设置",
+                                "cn_name" : "C_我的_设置_面试设置"
                             },
                             {   
-                                "location_name" : "无障碍求职"
+                                "location_name" : "无障碍求职",
+                                "cn_name" : "C_我的_设置_无障碍求职"
                             },
                             {
-                                "location_name" : "消息回复语"
+                                "location_name" : "消息回复语",
+                                "cn_name" : "C_我的_设置_消息回复语"
                             },
                             {
-                                "location_name" : "直播设置"
+                                "location_name" : "直播设置",
+                                "cn_name" : "C_我的_设置_直播设置"
                             },
                             {
-                                "location_name" : "通用设置"
+                                "location_name" : "通用设置",
+                                "cn_name" : "C_我的_设置_通用设置"
                             },
                             {
-                                "location_name" : "主题显示"
+                                "location_name" : "主题显示",
+                                "cn_name" : "C_我的_设置_主题显示"
                             },
                             {   
-                                "location_name" : "隐私设置"
+                                "location_name" : "隐私设置",
+                                "cn_name" : "C_我的_设置_隐私设置"
                             },
                             {
-                                "location_name" : "通知与提醒"
+                                "location_name" : "通知与提醒",
+                                "cn_name" : "C_我的_设置_通知与提醒"
                             },
                             {
-                                "location_name" : "账号与安全中心"
+                                "location_name" : "账号与安全中心",
+                                "cn_name" : "C_我的_设置_账号与安全中心"
                             }
                         ]
                     },
                     {
-                        "location_name" : "扫码"
+                        "location_name" : "扫码",
+                        "cn_name" : "C_我的_扫码"
                     },
                     {
-                        "location_name" : "切换身份"
+                        "location_name" : "切换身份",
+                        "cn_name" : "C_我的_切换身份"
                     }
                 ]
             },
             {
                 "location_name" : "消息",
+                "cn_name" : "C_消息",
                 "children" : [
                     {
-                        "location_name" : "直闪闪抽屉"
+                        "location_name" : "直闪闪抽屉",
+                        "cn_name" : "C_消息_直闪闪抽屉"
                     },
                     {
-                        "location_name" : "小秘书"
+                        "location_name" : "小秘书",
+                        "cn_name" : "C_消息_小秘书"
                     },
                     {
-                        "location_name" : "消息详情"
+                        "location_name" : "消息详情",
+                        "cn_name" : "C_消息_消息详情"
                     },
                     {
-                        "location_name" : "互动消息"
+                        "location_name" : "互动消息",
+                        "cn_name" : "C_消息_互动消息"
                     },
                     {
-                        "location_name" : "聊天列表"
+                        "location_name" : "聊天列表",
+                        "cn_name" : "C_消息_聊天列表"
                     }
                 ]
             },
             {
                 "location_name" : "有了",
+                "cn_name" : "C_有了",
                 "children" : [
                     {
-                        "location_name" : "内容搜索"
+                        "location_name" : "内容搜索",
+                        "cn_name" : "C_有了_内容搜索"
                     },
                     {
-                        "location_name" : "个人信息"
+                        "location_name" : "个人信息",
+                        "cn_name" : "C_有了_个人信息"
                     },
                     {
-                        "location_name" : "视频"
+                        "location_name" : "视频",
+                        "cn_name" : "C_有了_视频"
                     },
                     {
-                        "location_name" : "推荐"
+                        "location_name" : "推荐",
+                        "cn_name" : "C_有了_推荐"
                     },
                     {
-                        "location_name" : "关注"
+                        "location_name" : "关注",
+                        "cn_name" : "C_有了_关注"
                     }
                 ]
             },
             {
                 "location_name" : "职位列表",
+                "cn_name" : "C_职位列表",
                 "children" : [
                     {
-                        "location_name" : "职位详情"
+                        "location_name" : "职位详情",
+                        "cn_name" : "C_职位列表_职位详情"
                     },
                     {
-                        "location_name" : "地址"
+                        "location_name" : "地址",
+                        "cn_name" : "C_职位列表_地址"
                     },
                     {
-                        "location_name" : "筛选"
+                        "location_name" : "筛选",
+                        "cn_name" : "C_职位列表_筛选"
                     },
                     {
-                        "location_name" : "搜索"
+                        "location_name" : "搜索",
+                        "cn_name" : "C_职位列表_搜索"
                     },
                     {
-                        "location_name" : "最新"
+                        "location_name" : "最新",
+                        "cn_name" : "C_职位列表_最新"
                     },
                     {
-                        "location_name" : "附近"
+                        "location_name" : "附近",
+                        "cn_name" : "C_职位列表_附近"
                     },
                     {
-                        "location_name" : "推荐"
+                        "location_name" : "推荐",
+                        "cn_name" : "C_职位列表_推荐"
                     }
                 ]
             }
@@ -238,277 +309,361 @@
     },
     {
         "location_name" : "Web_C",
+        "cn_name" : "C",
         "children": [
             {
                 "location_name" : "公共组件",
+                "cn_name" : "C_公共组件",
                 "children" : [
                     {
-                        "location_name" : "职位卡片"
+                        "location_name" : "职位卡片",
+                        "cn_name" : "C_公共组件_职位卡片"
                     },
                     {
-                        "location_name" : "运营类卡片"
+                        "location_name" : "运营类卡片",
+                        "cn_name" : "C_公共组件_运营类卡片"
                     },
                     {
-                        "location_name" : "确认支付"
+                        "location_name" : "确认支付",
+                        "cn_name" : "C_公共组件_确认支付"
                     }
                 ]
             },
             {
                 "location_name" : "账号与安全中心",
+                "cn_name" : "C_账号与安全中心",
                 "children" : [
                     {
-                        "location_name" : "个人信息管理"
+                        "location_name" : "个人信息管理",
+                        "cn_name" : "C_账号与安全中心_个人信息管理"
                     },
                     {
-                        "location_name" : "身份验证"
+                        "location_name" : "身份验证",
+                        "cn_name" : "C_账号与安全中心_身份验证"
                     },
                     {
-                        "location_name" : "权限管理"
+                        "location_name" : "权限管理",
+                        "cn_name" : "C_账号与安全中心_权限管理"
                     },
                     {
-                        "location_name" : "账号管理"
+                        "location_name" : "账号管理",
+                        "cn_name" : "C_账号与安全中心_账号管理"
                     },
                     {
-                        "location_name" : "首页"
+                        "location_name" : "首页",
+                        "cn_name" : "C_账号与安全中心_首页"
                     }
                 ]
             },
             {
-                "location_name" : "规则中心"
+                "location_name" : "规则中心",
+                "cn_name" : "C_规则中心"
             },
             {
-                "location_name" : "个人中心"
+                "location_name" : "个人中心",
+                "cn_name" : "C_个人中心"
             },
             {
                 "location_name" : "隐私保护",
+                "cn_name" : "C_隐私保护",
                 "children" : [
                     {
-                        "location_name" : "BOSS黑名单"
+                        "location_name" : "BOSS黑名单",
+                        "cn_name" : "C_隐私保护_BOSS黑名单"
                     },
                     {
-                        "location_name" : "个性化推荐"
+                        "location_name" : "个性化推荐",
+                        "cn_name" : "C_隐私保护_个性化推荐"
                     },
                     {
-                        "location_name" : "屏蔽职类"
+                        "location_name" : "屏蔽职类",
+                        "cn_name" : "C_隐私保护_屏蔽职类"
                     },
                     {   
-                        "location_name" : "BOSS查看权限"
+                        "location_name" : "BOSS查看权限",
+                        "cn_name" : "C_隐私保护_BOSS查看权限"
                     },
                     {
-                        "location_name" : "屏蔽公司"
+                        "location_name" : "屏蔽公司",
+                        "cn_name" : "C_隐私保护_屏蔽公司"
                     }
                 ]
             },
             {
-                "location_name" : "简历"
+                "location_name" : "简历",
+                "cn_name" : "C_简历"
             },
             {
-                "location_name" : "消息"
+                "location_name" : "消息",
+                "cn_name" : "C_消息"
             },
             {
-                "location_name" : "项目外包"
+                "location_name" : "项目外包",
+                "cn_name" : "C_项目外包"
             },
             {
-                "location_name" : "海外"
+                "location_name" : "海外",
+                "cn_name" : "C_海外"
             },
             {
-                "location_name" : "有了"
+                "location_name" : "有了",
+                "cn_name" : "C_有了"
             },
             {
-                "location_name" : "海归"
+                "location_name" : "海归",
+                "cn_name" : "C_海归"
             },
             {
-                "location_name" : "校园"
+                "location_name" : "校园",
+                "cn_name" : "C_校园"
             },
             {
-                "location_name" : "公司"
+                "location_name" : "公司",
+                "cn_name" : "C_公司"
             },
             {
-                "location_name" : "职位列表"
+                "location_name" : "职位列表",
+                "cn_name" : "C_职位列表"
             },
             {
-                "location_name" : "首页"
+                "location_name" : "首页",
+                "cn_name" : "C_首页"
             }
         ] 
     },
     {
         "location_name" : "小程序_C",
+        "cn_name" : "C",
         "children" : [
             {
                 "location_name" : "我的",
+                "cn_name" : "C_我的",
                 "children" : [
                     {
                         "location_name" : "其他功能",
+                        "cn_name" : "C_我的_其他功能",
                         "children" : [
                             {
-                                "location_name" : "防骗指南"
+                                "location_name" : "防骗指南",
+                                "cn_name" : "C_我的_其他功能_防骗指南"
                             },
                             {
-                                "location_name" : "直直公益"
+                                "location_name" : "直直公益",
+                                "cn_name" : "C_我的_其他功能_直直公益"
                             },
                             {
-                                "location_name" : "薪酬查询"
+                                "location_name" : "薪酬查询",
+                                "cn_name" : "C_我的_其他功能_薪酬查询"
                             },
                             {
-                                "location_name" : "精选公司"
+                                "location_name" : "精选公司",
+                                "cn_name" : "C_我的_其他功能_精选公司"
                             },
                             {
-                                "location_name" : "职业测评"
+                                "location_name" : "职业测评",
+                                "cn_name" : "C_我的_其他功能_职业测评"
                             },
                             {
-                                "location_name" : "关于"
+                                "location_name" : "关于",
+                                "cn_name" : "C_我的_其他功能_关于"
                             },
                             {
-                                "location_name" : "笔试精选"
+                                "location_name" : "笔试精选",
+                                "cn_name" : "C_我的_其他功能_笔试精选"
                             },
                             {
-                                "location_name" : "规则中心"
+                                "location_name" : "规则中心",
+                                "cn_name" : "C_我的_其他功能_规则中心"
                             },
                             {
-                                "location_name" : "仲裁厅"
+                                "location_name" : "仲裁厅",
+                                "cn_name" : "C_我的_其他功能_仲裁厅"
                             },
                             {
-                                "location_name" : "个人主页"
+                                "location_name" : "个人主页",
+                                "cn_name" : "C_我的_其他功能_个人主页"
                             },
                             {
-                                "location_name" : "隐私规则"
+                                "location_name" : "隐私规则",
+                                "cn_name" : "C_我的_其他功能_隐私规则"
                             },
                             {
-                                "location_name" : "我的客服"
+                                "location_name" : "我的客服",
+                                "cn_name" : "C_我的_其他功能_我的客服"
                             }
                         ]
                     },
                     {
-                        "location_name" : "切换身份"
+                        "location_name" : "切换身份",
+                        "cn_name" : "C_我的_切换身份"
                     },
                     {
-                        "location_name" : "求职记录"
+                        "location_name" : "求职记录",
+                        "cn_name" : "C_我的_求职记录"
                     },
                     {
                         "location_name" : "VIP区域",
+                        "cn_name" : "C_我的_VIP区域",
                         "children" : [
                             {
-                                "location_name" : "牛人VIP"
+                                "location_name" : "牛人VIP",
+                                "cn_name" : "C_我的_VIP区域_牛人VIP"
                             },
                             {
-                                "location_name" : "MBTI"
+                                "location_name" : "MBTI",
+                                "cn_name" : "C_我的_VIP区域_MBTI"
                             },
                             {
-                                "location_name" : "简历定制"
+                                "location_name" : "简历定制",
+                                "cn_name" : "C_我的_VIP区域_简历定制"
                             }
                         ]
                     },
                     {
                         "location_name" : "常用功能",
+                        "cn_name" : "C_我的_常用功能",
                         "children" : [
                             {
-                                "location_name" : "附件简历"
+                                "location_name" : "附件简历",
+                                "cn_name" : "C_我的_常用功能_附件简历"
                             },
                             {
-                                "location_name" : "道具商城"
+                                "location_name" : "道具商城",
+                                "cn_name" : "C_我的_常用功能_道具商城"
                             },
                             {
-                                "location_name" : "在线简历"
+                                "location_name" : "在线简历",
+                                "cn_name" : "C_我的_常用功能_在线简历"
                             },
                             {
-                                "location_name" : "求职期望"
+                                "location_name" : "求职期望",
+                                "cn_name" : "C_我的_常用功能_求职期望"
                             }
                         ]
                     },
                     {
-                        "location_name" : "面试日程"
+                        "location_name" : "面试日程",
+                        "cn_name" : "C_我的_面试日程"
                     },
                     {
-                        "location_name" : "收藏"
+                        "location_name" : "收藏",
+                        "cn_name" : "C_我的_收藏"
                     }
                 ]
             },
             {
                 "location_name" : "职位列表",
+                "cn_name" : "C_职位列表",
                 "children" : [
                     {
-                        "location_name" : "今日速配"
+                        "location_name" : "今日速配",
+                        "cn_name" : "C_职位列表_今日速配"
                     },
                     {
-                        "location_name" : "附近"
+                        "location_name" : "附近",
+                        "cn_name" : "C_职位列表_附近"
                     },
                     {
-                        "location_name" : "热门兼职"
+                        "location_name" : "热门兼职",
+                        "cn_name" : "C_职位列表_热门兼职"
                     },
                     {
-                        "location_name" : "推荐"
+                        "location_name" : "推荐",
+                        "cn_name" : "C_职位列表_推荐"
                     },
                     {
-                        "location_name" : "行业图谱"
+                        "location_name" : "行业图谱",
+                        "cn_name" : "C_职位列表_行业图谱"
                     },
                     {
-                        "location_name" : "筛选"
+                        "location_name" : "筛选",
+                        "cn_name" : "C_职位列表_筛选"
                     },
                     {
-                        "location_name" : "职位详情"
+                        "location_name" : "职位详情",
+                        "cn_name" : "C_职位列表_职位详情"
                     },
                     {
-                        "location_name" : "岗位专区"
+                        "location_name" : "岗位专区",
+                        "cn_name" : "C_职位列表_岗位专区"
                     },
                     {
-                        "location_name" : "搜索"
+                        "location_name" : "搜索",
+                        "cn_name" : "C_职位列表_搜索"
                     }
                 ]
             },
             {
                 "location_name" : "地区",
+                "cn_name" : "C_地区",
                 "children" : [
                     {
-                        "location_name" : "选岗位"
+                        "location_name" : "选岗位",
+                        "cn_name" : "C_地区_选岗位"
                     },
                     {
-                        "location_name" : "选行业"
+                        "location_name" : "选行业",
+                        "cn_name" : "C_地区_选行业"
                     },
                     {
-                        "location_name" : "看直播"
+                        "location_name" : "看直播",
+                        "cn_name" : "C_地区_看直播"
                     },
                     {
-                        "location_name" : "挑地点"
+                        "location_name" : "挑地点",
+                        "cn_name" : "C_地区_挑地点"
                     },
                     {
-                        "location_name" : "找公司"
+                        "location_name" : "找公司",
+                        "cn_name" : "C_地区_找公司"
                     }
                 ]
             },
             {
                 "location_name" : "公共组件",
+                "cn_name" : "C_公共组件",
                 "children" : [
                     {
-                        "location_name" : "阻断商品详情"
+                        "location_name" : "阻断商品详情",
+                        "cn_name" : "C_公共组件_阻断商品详情"
                     },
                     {
-                        "location_name" : "弹窗"
+                        "location_name" : "弹窗",
+                        "cn_name" : "C_公共组件_弹窗"
                     },
                     {
-                        "location_name" : "职位卡片"
+                        "location_name" : "职位卡片",
+                        "cn_name" : "C_公共组件_职位卡片"
                     },
                     {
-                        "location_name" : "push"
+                        "location_name" : "push",
+                        "cn_name" : "C_公共组件_push"
                     },
                     {
-                        "location_name" : "运营类卡片"
+                        "location_name" : "运营类卡片",
+                        "cn_name" : "C_公共组件_运营类卡片"
                     }
                 ]
             },
             {
                 "location_name" : "消息",
+                "cn_name" : "C_消息",
                 "children" : [
                     {
-                        "location_name" : "消息详情"
+                        "location_name" : "消息详情",
+                        "cn_name" : "C_消息_消息详情"
                     },
                     {
-                        "location_name" : "聊天列表"
+                        "location_name" : "聊天列表",
+                        "cn_name" : "C_消息_聊天列表"
                     },
                     {
-                        "location_name" : "互动消息"
+                        "location_name" : "互动消息",
+                        "cn_name" : "C_消息_互动消息"
                     },
                     {
-                        "location_name" : "小秘书"
+                        "location_name" : "小秘书",
+                        "cn_name" : "C_消息_小秘书"
                     }
                 ]
             }
@@ -516,271 +671,353 @@
     },
     {
         "location_name" : "APP_B",
+        "cn_name" : "B",
         "children" : [
             {
                 "location_name" : "公共组件",
+                "cn_name" : "B_公共组件",
                 "children" : [
                     {
-                        "location_name" : "牛人卡片"
+                        "location_name" : "牛人卡片",
+                        "cn_name" : "B_公共组件_牛人卡片"
                     },
                     {
-                        "location_name" : "商详页"
+                        "location_name" : "商详页",
+                        "cn_name" : "B_公共组件_商详页"
                     },
                     {
-                        "location_name" : "阻断商品详情"
+                        "location_name" : "阻断商品详情",
+                        "cn_name" : "B_公共组件_阻断商品详情"
                     },
                     {
-                        "location_name" : "确认支付"
+                        "location_name" : "确认支付",
+                        "cn_name" : "B_公共组件_确认支付"
                     },
                     {
-                        "location_name" : "运营类卡片"
+                        "location_name" : "运营类卡片",
+                        "cn_name" : "B_公共组件_运营类卡片"
                     },
                     {
-                        "location_name" : "弹窗"
+                        "location_name" : "弹窗",
+                        "cn_name" : "B_公共组件_弹窗"
                     },
                     {
-                        "location_name" : "push"
+                        "location_name" : "push",
+                        "cn_name" : "B_公共组件_push"
                     }
                 ]
             },
             {
                 "location_name" : "我的",
+                "cn_name" : "B_我的",
                 "children" : [
                     {
                         "location_name" : "其他功能",
+                        "cn_name" : "B_我的_其他功能",
                         "children" : [
                             {
-                                "location_name" : "萤火虫"
+                                "location_name" : "萤火虫",
+                                "cn_name" : "B_我的_其他功能_萤火虫"
                             },
                             {
-                                "location_name" : "公司主页"
+                                "location_name" : "公司主页",
+                                "cn_name" : "B_我的_其他功能_公司主页"
                             },
                             {
-                                "location_name" : "仲裁厅"
+                                "location_name" : "仲裁厅",
+                                "cn_name" : "B_我的_其他功能_仲裁厅"
                             },
                             {
-                                "location_name" : "规则中心"
+                                "location_name" : "规则中心",
+                                "cn_name" : "B_我的_其他功能_规则中心"
                             },
                             {
-                                "location_name" : "项目外包"
+                                "location_name" : "项目外包",
+                                "cn_name" : "B_我的_其他功能_项目外包"
                             },
                             {
-                                "location_name" : "勋章"
+                                "location_name" : "勋章",
+                                "cn_name" : "B_我的_其他功能_勋章"
                             },
                             {
-                                "location_name" : "直直公益"
+                                "location_name" : "直直公益",
+                                "cn_name" : "B_我的_其他功能_直直公益"
                             },
                             {
-                                "location_name" : "直播招聘"
+                                "location_name" : "直播招聘",
+                                "cn_name" : "B_我的_其他功能_直播招聘"
                             },
                             {
-                                "location_name" : "权益"
+                                "location_name" : "权益",
+                                "cn_name" : "B_我的_其他功能_权益"
                             },
                             {
-                                "location_name" : "钱包发票"
+                                "location_name" : "钱包发票",
+                                "cn_name" : "B_我的_其他功能_钱包发票"
                             },
                             {
-                                "location_name" : "地址管理"
+                                "location_name" : "地址管理",
+                                "cn_name" : "B_我的_其他功能_地址管理"
                             },
                             {
-                                "location_name" : "关于"
+                                "location_name" : "关于",
+                                "cn_name" : "B_我的_其他功能_关于"
                             },
                             {
-                                "location_name" : "隐私规则"
+                                "location_name" : "隐私规则",
+                                "cn_name" : "B_我的_其他功能_隐私规则"
                             },
                             {
-                                "location_name" : "开发票"
+                                "location_name" : "开发票",
+                                "cn_name" : "B_我的_其他功能_开发票"
                             },
                             {
-                                "location_name" : "个人主页"
+                                "location_name" : "个人主页",
+                                "cn_name" : "B_我的_其他功能_个人主页"
                             },
                             {
-                                "location_name" : "我的客服"
+                                "location_name" : "我的客服",
+                                "cn_name" : "B_我的_其他功能_我的客服"
                             }
                         ]
                     },
                     {
-                        "location_name" : "面试日程"
+                        "location_name" : "面试日程",
+                        "cn_name" : "B_我的_面试日程"
                     },
                     {
                         "location_name" : "设置",
+                        "cn_name" : "B_我的_设置",
                         "children" : [
                             {
-                                "location_name" : "通知与提醒"
+                                "location_name" : "通知与提醒",
+                                "cn_name" : "B_我的_设置_通知与提醒"
                             },
                             {
-                                "location_name" : "通用设置"
+                                "location_name" : "通用设置",
+                                "cn_name" : "B_我的_设置_通用设置"
                             },
                             {
-                                "location_name" : "隐私设置"
+                                "location_name" : "隐私设置",
+                                "cn_name" : "B_我的_设置_隐私设置"
                             },
                             {
-                                "location_name" : "面试设置"
+                                "location_name" : "面试设置",
+                                "cn_name" : "B_我的_设置_面试设置"
                             },
                             {
-                                "location_name" : "主题显示"
+                                "location_name" : "主题显示",
+                                "cn_name" : "B_我的_设置_主题显示"
                             },
                             {
-                                "location_name" : "VIP管理功能"
+                                "location_name" : "VIP管理功能",
+                                "cn_name" : "B_我的_设置_VIP管理功能"
                             },
                             {
-                                "location_name" : "账号与安全中心"
+                                "location_name" : "账号与安全中心",
+                                "cn_name" : "B_我的_设置_账号与安全中心"
                             },
                             {
-                                "location_name" : "道具管理功能"
+                                "location_name" : "道具管理功能",
+                                "cn_name" : "B_我的_设置_道具管理功能"
                             },
                             {
-                                "location_name" : "消息回复语"
+                                "location_name" : "消息回复语",
+                                "cn_name" : "B_我的_设置_消息回复语"
                             }
                         ]
                     },
                     {
-                        "location_name" : "沟通过"
+                        "location_name" : "沟通过",
+                        "cn_name" : "B_我的_沟通过"
                     },
                     {
                         "location_name" : "常用功能",
+                        "cn_name" : "B_我的_常用功能",
                         "children" : [
                             {
-                                "location_name" : "招聘社区"
+                                "location_name" : "招聘社区",
+                                "cn_name" : "B_我的_常用功能_招聘社区"
                             },
                             {
-                                "location_name" : "招聘道具"
+                                "location_name" : "招聘道具",
+                                "cn_name" : "B_我的_常用功能_招聘道具"
                             },
                             {
-                                "location_name" : "招聘数据"
+                                "location_name" : "招聘数据",
+                                "cn_name" : "B_我的_常用功能_招聘数据"
                             }
                         ]
                     },
                     {
-                        "location_name" : "个人信息"
+                        "location_name" : "个人信息",
+                        "cn_name" : "B_我的_个人信息"
                     },
                     {
-                        "location_name" : "影响力"
+                        "location_name" : "影响力",
+                        "cn_name" : "B_我的_影响力"
                     },
                     {
-                        "location_name" : "切换身份"
+                        "location_name" : "切换身份",
+                        "cn_name" : "B_我的_切换身份"
                     },
                     {
-                        "location_name" : "职位管理"
+                        "location_name" : "职位管理",
+                        "cn_name" : "B_我的_职位管理"
                     },
                     {
-                        "location_name" : "扫码"
+                        "location_name" : "扫码",
+                        "cn_name" : "B_我的_扫码"
                     },
                     {
-                        "location_name" : "收藏"
+                        "location_name" : "收藏",
+                        "cn_name" : "B_我的_收藏"
                     },
                     {
-                        "location_name" : "vip横条"
+                        "location_name" : "vip横条",
+                        "cn_name" : "B_我的_vip横条"
                     }
                 ]
             },
             {
                 "location_name" : "首善",
+                "cn_name" : "B_首善",
                 "children" : [
                     {
-                        "location_name" : "发布职位"
+                        "location_name" : "发布职位",
+                        "cn_name" : "B_首善_发布职位"
                     },
                     {
                         "location_name" : "基础信息",
+                        "cn_name" : "B_首善_基础信息",
                         "children" : [
                             {
-                                "location_name" : "行业页面曝光"
+                                "location_name" : "行业页面曝光",
+                                "cn_name" : "B_首善_基础信息_行业页面曝光"
                             }
                         ]
                     },
                     {
-                        "location_name" : "企业认证"
+                        "location_name" : "企业认证",
+                        "cn_name" : "B_首善_企业认证"
                     },
                     {
-                        "location_name" : "实名认证"
+                        "location_name" : "实名认证",
+                        "cn_name" : "B_首善_实名认证"
                     },
                     {
-                        "location_name" : "更换公司"
+                        "location_name" : "更换公司",
+                        "cn_name" : "B_首善_更换公司"
                     },
                     {
-                        "location_name" : "解绑实名"
+                        "location_name" : "解绑实名",
+                        "cn_name" : "B_首善_解绑实名"
                     }
                 ]
             },
             {
                 "location_name" : "搜索",
+                "cn_name" : "B_搜索",
                 "children" : [
                     {
-                        "location_name" : "匿名牛人简历详情"
+                        "location_name" : "匿名牛人简历详情",
+                        "cn_name" : "B_搜索_匿名牛人简历详情"
                     },
                     {
                         "location_name" : "搜索中间页",
+                        "cn_name" : "B_搜索_搜索中间页",
                         "children" : [
                             {
-                                "location_name" : "热门词搜索"
+                                "location_name" : "热门词搜索",
+                                "cn_name" : "B_搜索_搜索中间页_热门词搜索"
                             },
                             {
-                                "location_name" : "我的订阅"
+                                "location_name" : "我的订阅",
+                                "cn_name" : "B_搜索_搜索中间页_我的订阅"
                             }
                         ]
                     },
                     {
-                        "location_name" : "搜索结果页"
+                        "location_name" : "搜索结果页",
+                        "cn_name" : "B_搜索_搜索结果页"
                     }
                 ]
             },
             {
                 "location_name" : "牛人列表",
+                "cn_name" : "B_牛人列表",
                 "children" : [
                     {
-                        "location_name" : "最新"
+                        "location_name" : "最新",
+                        "cn_name" : "B_牛人列表_最新"
                     },
                     {
-                        "location_name" : "简历详情"
+                        "location_name" : "简历详情",
+                        "cn_name" : "B_牛人列表_简历详情"
                     },
                     {
-                        "location_name" : "筛选"
+                        "location_name" : "筛选",
+                        "cn_name" : "B_牛人列表_筛选"
                     },
                     {
-                        "location_name" : "精选"
+                        "location_name" : "精选",
+                        "cn_name" : "B_牛人列表_精选"
                     },
                     {
-                        "location_name" : "推荐"
+                        "location_name" : "推荐",
+                        "cn_name" : "B_牛人列表_推荐"
                     },
                     {
-                        "location_name" : "地址"
+                        "location_name" : "地址",
+                        "cn_name" : "B_牛人列表_地址"
                     },
                     {
-                        "location_name" : "不喜欢"
+                        "location_name" : "不喜欢",
+                        "cn_name" : "B_牛人列表_不喜欢"
                     }
                 ]
             },
             {
                 "location_name" : "消息",
+                "cn_name" : "B_消息",
                 "children" : [
                     {
-                        "location_name" : "消息详情"
+                        "location_name" : "消息详情",
+                        "cn_name" : "B_消息_消息详情"
                     },
                     {
-                        "location_name" : "小秘书"
+                        "location_name" : "小秘书",
+                        "cn_name" : "B_消息_小秘书"
                     },
                     {
-                        "location_name" : "聊天列表"
+                        "location_name" : "聊天列表",
+                        "cn_name" : "B_消息_聊天列表"
                     },
                     {
-                        "location_name" : "互动列表"
+                        "location_name" : "互动列表",
+                        "cn_name" : "B_消息_互动列表"
                     },
                     {
-                        "location_name" : "设置"
+                        "location_name" : "设置",
+                        "cn_name" : "B_消息_设置"
                     }
                 ]
             },
             {
-                "location_name" : "举报"
+                "location_name" : "举报",
+                "cn_name" : "B_举报"
             },
             {
-                "location_name" : "深度搜索"
+                "location_name" : "深度搜索",
+                "cn_name" : "B_深度搜索"
             },
             {
                 "location_name" : "安全框架",
+                "cn_name" : "B_安全框架",
                 "children" : [
                     {
-                        "location_name" : "ai引导环境认证"
+                        "location_name" : "ai引导环境认证",
+                        "cn_name" : "B_安全框架_ai引导环境认证"
                     }
                 ]
             }
@@ -788,155 +1025,203 @@
     },
     {
         "location_name" : "Web_B",
+        "cn_name" : "B",
         "children" : [
             {
                 "location_name" : "职位管理",
+                "cn_name" : "B_职位管理",
                 "children" : [
                     {
-                        "location_name" : "职位编辑"
+                        "location_name" : "职位编辑",
+                        "cn_name" : "B_职位管理_职位编辑"
                     },
                     {
-                        "location_name" : "职位预览"
+                        "location_name" : "职位预览",
+                        "cn_name" : "B_职位管理_职位预览"
                     },
                     {
-                        "location_name" : "已关闭"
+                        "location_name" : "已关闭",
+                        "cn_name" : "B_职位管理_已关闭"
                     },
                     {
-                        "location_name" : "职位发布"
+                        "location_name" : "职位发布",
+                        "cn_name" : "B_职位管理_职位发布"
                     },
                     {
-                        "location_name" : "审核不通过"
+                        "location_name" : "审核不通过",
+                        "cn_name" : "B_职位管理_审核不通过"
                     },
                     {
-                        "location_name" : "全部职位"
+                        "location_name" : "全部职位",
+                        "cn_name" : "B_职位管理_全部职位"
                     },
                     {
-                        "location_name" : "开放中"
+                        "location_name" : "开放中",
+                        "cn_name" : "B_职位管理_开放中"
                     },
                     {
-                        "location_name" : "待开放"
+                        "location_name" : "待开放",
+                        "cn_name" : "B_职位管理_待开放"
                     }
                 ]
             },
             {
                 "location_name" : "沟通",
+                "cn_name" : "B_沟通",
                 "children" : [
                     {
-                        "location_name" : "已交换微信"
+                        "location_name" : "已交换微信",
+                        "cn_name" : "B_沟通_已交换微信"
                     },
                     {
-                        "location_name" : "收藏"
+                        "location_name" : "收藏",
+                        "cn_name" : "B_沟通_收藏"
                     },
                     {
-                        "location_name" : "群聊"
+                        "location_name" : "群聊",
+                        "cn_name" : "B_沟通_群聊"
                     },
                     {
-                        "location_name" : "道具来源"
+                        "location_name" : "道具来源",
+                        "cn_name" : "B_沟通_道具来源"
                     },
                     {
-                        "location_name" : "已约面"
+                        "location_name" : "已约面",
+                        "cn_name" : "B_沟通_已约面"
                     },
                     {
-                        "location_name" : "已获取简历"
+                        "location_name" : "已获取简历",
+                        "cn_name" : "B_沟通_已获取简历"
                     },
                     {
-                        "location_name" : "已交换电话"
+                        "location_name" : "已交换电话",
+                        "cn_name" : "B_沟通_已交换电话"
                     },
                     {
-                        "location_name" : "沟通中"
+                        "location_name" : "沟通中",
+                        "cn_name" : "B_沟通_沟通中"
                     },
                     {
-                        "location_name" : "消息详情"
+                        "location_name" : "消息详情",
+                        "cn_name" : "B_沟通_消息详情"
                     },
                     {
-                        "location_name" : "不合适"
+                        "location_name" : "不合适",
+                        "cn_name" : "B_沟通_不合适"
                     },
                     {
-                        "location_name" : "牛人发起"
+                        "location_name" : "牛人发起",
+                        "cn_name" : "B_沟通_牛人发起"
                     },
                     {
-                        "location_name" : "全部"
+                        "location_name" : "全部",
+                        "cn_name" : "B_沟通_全部"
                     },
                     {
-                        "location_name" : "我发起"
+                        "location_name" : "我发起",
+                        "cn_name" : "B_沟通_我发起"
                     },
                     {
-                        "location_name" : "新招呼"
+                        "location_name" : "新招呼",
+                        "cn_name" : "B_沟通_新招呼"
                     }
                 ]
             },
             {
                 "location_name" : "个人中心",
+                "cn_name" : "B_个人中心",
                 "children" : [
                     {
-                        "location_name" : "道具功能管理"
+                        "location_name" : "道具功能管理",
+                        "cn_name" : "B_个人中心_道具功能管理"
                     },
                     {
-                        "location_name" : "地址管理"
+                        "location_name" : "地址管理",
+                        "cn_name" : "B_个人中心_地址管理"
                     },
                     {
-                        "location_name" : "招聘资质管理"
+                        "location_name" : "招聘资质管理",
+                        "cn_name" : "B_个人中心_招聘资质管理"
                     },
                     {
-                        "location_name" : "首页"
+                        "location_name" : "首页",
+                        "cn_name" : "B_个人中心_首页"
                     },
                     {
-                        "location_name" : "个人信息"
+                        "location_name" : "个人信息",
+                        "cn_name" : "B_个人中心_个人信息"
                     },
                     {
-                        "location_name" : "设置打招呼"
+                        "location_name" : "设置打招呼",
+                        "cn_name" : "B_个人中心_设置打招呼"
                     },
                     {
-                        "location_name" : "问题反馈"
+                        "location_name" : "问题反馈",
+                        "cn_name" : "B_个人中心_问题反馈"
                     },
                     {
-                        "location_name" : "账号与绑定"
+                        "location_name" : "账号与绑定",
+                        "cn_name" : "B_个人中心_账号与绑定"
                     }
                 ]
             },
             {
                 "location_name" : "互动",
+                "cn_name" : "B_互动",
                 "children" : [
                     {
-                        "location_name" : "对我感兴趣"
+                        "location_name" : "对我感兴趣",
+                        "cn_name" : "B_互动_对我感兴趣"
                     },
                     {
-                        "location_name" : "看过我"
+                        "location_name" : "看过我",
+                        "cn_name" : "B_互动_看过我"
                     },
                     {
-                        "location_name" : "同事推荐"
+                        "location_name" : "同事推荐",
+                        "cn_name" : "B_互动_同事推荐"
                     },
                     {
-                        "location_name" : "收藏牛人"
+                        "location_name" : "收藏牛人",
+                        "cn_name" : "B_互动_收藏牛人"
                     },
                     {
-                        "location_name" : "我看过"
+                        "location_name" : "我看过",
+                        "cn_name" : "B_互动_我看过"
                     },
                     {
-                        "location_name" : "沟通过"
+                        "location_name" : "沟通过",
+                        "cn_name" : "B_互动_沟通过"
                     }
                 ]
             },
             {
-                "location_name" : "面试"
+                "location_name" : "面试",
+                "cn_name" : "B_面试"
             },
             {
                 "location_name" : "轻猎交付",
+                "cn_name" : "B_轻猎交付",
                 "children" : [
                     {
-                        "location_name" : "客户端"
+                        "location_name" : "客户端",
+                        "cn_name" : "B_轻猎交付_客户端"
                     },
                     {
                         "location_name" : "顾问端",
+                        "cn_name" : "B_轻猎交付_顾问端",
                         "children" : [
                             {
-                                "location_name" : "人才检索"
+                                "location_name" : "人才检索",
+                                "cn_name" : "B_轻猎交付_顾问端_人才检索"
                             },
                             {
-                                "location_name" : "自动搜索试验"
+                                "location_name" : "自动搜索试验",
+                                "cn_name" : "B_轻猎交付_顾问端_自动搜索试验"
                             },
                             {
-                                "location_name" : "人才池"
+                                "location_name" : "人才池",
+                                "cn_name" : "B_轻猎交付_顾问端_人才池"
                             }
                         ]
                     }
@@ -944,143 +1229,185 @@
             },
             {
                 "location_name" : "牛人列表",
+                "cn_name" : "B_牛人列表",
                 "children" : [
                     {
-                        "location_name" : "推荐"
+                        "location_name" : "推荐",
+                        "cn_name" : "B_牛人列表_推荐"
                     },
                     {
-                        "location_name" : "筛选"
+                        "location_name" : "筛选",
+                        "cn_name" : "B_牛人列表_筛选"
                     },
                     {
-                        "location_name" : "新牛人"
+                        "location_name" : "新牛人",
+                        "cn_name" : "B_牛人列表_新牛人"
                     },
                     {
-                        "location_name" : "简历详情"
+                        "location_name" : "简历详情",
+                        "cn_name" : "B_牛人列表_简历详情"
                     },
                     {
-                        "location_name" : "精选"
+                        "location_name" : "精选",
+                        "cn_name" : "B_牛人列表_精选"
                     },
                     {
-                        "location_name" : "地址"
+                        "location_name" : "地址",
+                        "cn_name" : "B_牛人列表_地址"
                     }
                 ]
             },
             {
                 "location_name" : "公共组件",
+                "cn_name" : "B_公共组件",
                 "children" : [
                     {
-                        "location_name" : "运营类卡片"
+                        "location_name" : "运营类卡片",
+                        "cn_name" : "B_公共组件_运营类卡片"
                     },
                     {
-                        "location_name" : "牛人卡片"
+                        "location_name" : "牛人卡片",
+                        "cn_name" : "B_公共组件_牛人卡片"
                     },
                     {
-                        "location_name" : "阻断商品详情"
+                        "location_name" : "阻断商品详情",
+                        "cn_name" : "B_公共组件_阻断商品详情"
                     }
                 ]
             },
             {
-                "location_name" : "规则中心"
+                "location_name" : "规则中心",
+                "cn_name" : "B_规则中心"
             },
             {
-                "location_name" : "小秘书"
+                "location_name" : "小秘书",
+                "cn_name" : "B_小秘书"
             },
             {
                 "location_name" : "牛人管理",
+                "cn_name" : "B_牛人管理",
                 "children" : [
                     {
-                        "location_name" : "已入职"
+                        "location_name" : "已入职",
+                        "cn_name" : "B_牛人管理_已入职"
                     },
                     {
-                        "location_name" : "不合适"
+                        "location_name" : "不合适",
+                        "cn_name" : "B_牛人管理_不合适"
                     },
                     {
-                        "location_name" : "单聊"
+                        "location_name" : "单聊",
+                        "cn_name" : "B_牛人管理_单聊"
                     },
                     {
-                        "location_name" : "沟通中"
+                        "location_name" : "沟通中",
+                        "cn_name" : "B_牛人管理_沟通中"
                     },
                     {
-                        "location_name" : "已发offer"
+                        "location_name" : "已发offer",
+                        "cn_name" : "B_牛人管理_已发offer"
                     },
                     {
-                        "location_name" : "已约面"
+                        "location_name" : "已约面",
+                        "cn_name" : "B_牛人管理_已约面"
                     }
                 ]
             },
             {
-                "location_name" : "项目外包"
+                "location_name" : "项目外包",
+                "cn_name" : "B_项目外包"
             },
             {
-                "location_name" : "创作中心"
+                "location_name" : "创作中心",
+                "cn_name" : "B_创作中心"
             },
             {
-                "location_name" : "新牛人管理"
+                "location_name" : "新牛人管理",
+                "cn_name" : "B_新牛人管理"
             },
             {
                 "location_name" : "道具",
+                "cn_name" : "B_道具",
                 "children" : [
                     {
-                        "location_name" : "道具通知"
+                        "location_name" : "道具通知",
+                        "cn_name" : "B_道具_道具通知"
                     },
                     {
-                        "location_name" : "道具商城"
+                        "location_name" : "道具商城",
+                        "cn_name" : "B_道具_道具商城"
                     },
                     {
-                        "location_name" : "我的道具"
+                        "location_name" : "我的道具",
+                        "cn_name" : "B_道具_我的道具"
                     }
                 ]
             },
             {
                 "location_name" : "招聘数据",
+                "cn_name" : "B_招聘数据",
                 "children" : [
                     {
-                        "location_name" : "轻猎交付"
+                        "location_name" : "轻猎交付",
+                        "cn_name" : "B_招聘数据_轻猎交付"
                     }
                 ]
             },
             {
-                "location_name" : "工具箱"
+                "location_name" : "工具箱",
+                "cn_name" : "B_工具箱"
             },
             {
-                "location_name" : "我的客服"
+                "location_name" : "我的客服",
+                "cn_name" : "B_我的客服"
             },
             {
                 "location_name" : "搜索",
+                "cn_name" : "B_搜索",
                 "children" : [
                     {
-                        "location_name" : "热门词推荐"
+                        "location_name" : "热门词推荐",
+                        "cn_name" : "B_搜索_热门词推荐"
                     },
                     {
-                        "location_name" : "匿名牛人简历详情"
+                        "location_name" : "匿名牛人简历详情",
+                        "cn_name" : "B_搜索_匿名牛人简历详情"
                     },
                     {
-                        "location_name" : "搜索结果页"
+                        "location_name" : "搜索结果页",
+                        "cn_name" : "B_搜索_搜索结果页"
                     },
                     {
-                        "location_name" : "筛选"
+                        "location_name" : "筛选",
+                        "cn_name" : "B_搜索_筛选"
                     }
                 ]
             },
             {
-                "location_name" : "升级VIP"
+                "location_name" : "升级VIP",
+                "cn_name" : "B_升级VIP"
             },
             {
-                "location_name" : "账号权益"
+                "location_name" : "账号权益",
+                "cn_name" : "B_账号权益"
             },
             {
-                "location_name" : "AI速招"
+                "location_name" : "AI速招",
+                "cn_name" : "B_AI速招"
             },
             {
-                "location_name" : "purple"
+                "location_name" : "purple",
+                "cn_name" : "B_purple"
             },
             {
-                "location_name" : "直播招聘"
+                "location_name" : "直播招聘",
+                "cn_name" : "B_直播招聘"
             }
         ]
     },
     {
-        "location_name" : "无页面位置"
+        "location_name" : "无页面位置",
+        "cn_name" : "server"
     }
     ]
 }
