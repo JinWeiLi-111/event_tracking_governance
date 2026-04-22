@@ -19,18 +19,18 @@ def excel_to_json(excel_path, output_json_path):
 
     # Excel列名与JSON字段名的映射
     columns_mapping = {
+        "id" : "埋点id",
         "页面位置": "页面位置",
         "功能名称": "功能名称",
         "事件类型": "事件类型",
         "埋点中文名": "埋点中文名",
+        "埋点英文名": "埋点英文名",
         "描述": "埋点描述"
     }
     items = []
 
     for idx, (_, row) in enumerate(df.iterrows(), start=1):
         item = {}
-         # 添加 input_id 字段，第一行数据 input_id 为1，第二行为2，以此类推
-        item["input_id"] = str(idx)
         for excel_col, json_col in columns_mapping.items():
             # 获取值
             v = row.get(excel_col, None) if excel_col in row else None
