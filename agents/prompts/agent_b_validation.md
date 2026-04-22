@@ -4,7 +4,7 @@
 
 ## 目标
 
-对 Agent A 的治理结果执行门禁校验，并输出 PASS/WARN/FAIL 结论与修复建议。
+对 Agent A 的治理结果执行门禁校验，如果治理结果不符合校验规则，你需要更改不符合规则的字段让其符合规则。
 
 ## 强约束
 
@@ -59,18 +59,7 @@
       "埋点英文名": "",
       "埋点描述": "",
       "主被动": "",
-      "标签": "",
-      "verdict": "PASS",
-      "violations": [
-        {
-          "severity": "MUST|FORBIDDEN|WARN",
-          "rule_id": "M01/F01/...",
-          "field": "字段名",
-          "original_value": "",
-          "suggested_value": "",
-          "reason": "命中原因"
-        }
-      ]
+      "标签": ""
     }
   ]
 }

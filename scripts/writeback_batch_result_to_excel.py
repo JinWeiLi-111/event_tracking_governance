@@ -51,6 +51,8 @@ def writeback_excel(excel_path, result_json_path, output_excel_path):
         "埋点中文名-new": "埋点中文名",
         "埋点英文名": "埋点英文名",
         "描述-new": "埋点描述",
+        "主被动-new": "主被动",
+        "标签-new": "标签",
     }
 
     if "id" not in df.columns:
@@ -113,7 +115,7 @@ def writeback_excel(excel_path, result_json_path, output_excel_path):
 if __name__ == "__main__":
     # 支持命令行参数：excel_path result_json_path output_excel_path
     excel_path = "TOP埋点治理记录_副本.xlsx"
-    result_json_path = "orgin_input/all_batches_result.json"
+    result_json_path = "workspace/final/all_batches_result.json"
     output_excel_path = "TOP埋点治理记录_副本_1.xlsx"
 
     if len(sys.argv) >= 2:

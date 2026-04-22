@@ -5,16 +5,16 @@ from pathlib import Path
 
 
 def batch_index(path: Path) -> int:
-    match = re.search(r"batch(\d+)_result\.json$", path.name)
+    match = re.search(r"batch(\d+)_review\.json$", path.name)
     if not match:
         return 10**9
     return int(match.group(1))
 
 
 def merge_batch_results(input_dir: Path, output_file: Path) -> None:
-    batch_files = sorted(input_dir.glob("batch*_result.json"), key=batch_index)
+    batch_files = sorted(input_dir.glob("batch*_review.json"), key=batch_index)
     if not batch_files:
-        raise FileNotFoundError(f"No batch result files found in: {input_dir}")
+        raise FileNotFoundError(f"No batch review files found in: {input_dir}")
 
     merged_items = []
     merged_batches = []
@@ -48,16 +48,16 @@ def merge_batch_results(input_dir: Path, output_file: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Merge items from batch*_result.json into one JSON file."
+        description="Merge items from batch*_review.json into one JSON file."
     )
     parser.add_argument(
         "--input-dir",
-        default="orgin_input",
-        help="Directory containing batch*_result.json files.",
+        default="workspace/agent_b_review",
+        help="Directory containing batch*_review.json files.",
     )
     parser.add_argument(
         "--output-file",
-        default="orgin_input/all_batches_result.json",
+        default="workspace/final/all_batches_result.json",
         help="Output merged JSON file path.",
     )
     args = parser.parse_args()

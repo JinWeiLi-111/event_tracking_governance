@@ -8,6 +8,14 @@
         "cn_name" : "C",
         "children": [
             {
+                "location_name" : "登录",
+                "cn_name" : "C_登录"
+            },
+            {
+                "location_name" : "注册",
+                "cn_name" : "C_注册"
+            },
+            {
                 "location_name" : "个人雇主B",
                 "cn_name" : "C_个人雇主B"
             },
@@ -706,6 +714,14 @@
                         "cn_name" : "B_公共组件_push"
                     }
                 ]
+            },
+            {
+                "location_name" : "登录",
+                "cn_name" : "B_登录"
+            },
+            {
+                "location_name" : "注册",
+                "cn_name" : "B_注册"
             },
             {
                 "location_name" : "我的",
@@ -1407,7 +1423,7 @@
     },
     {
         "location_name" : "无页面位置",
-        "cn_name" : "server"
+        "cn_name" : "无页面位置"
     }
     ]
 }
