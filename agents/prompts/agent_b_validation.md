@@ -18,35 +18,65 @@
 
 ## 输入
 
-- Agent A 输出的扁平 JSON（九个基础字段同构）。
-- 兼容旧结构：若输入包含 `governed_output`，以 `governed_output` 作为待校验对象。
-
-## 输出格式（必须）
+- Agent A 输出的扁平 JSON（九个基础字段同构），支持单条或批次。
+- 批次输入推荐结构：
 
 ```json
 {
-  "埋点id": "",
-  "页面位置": "",
-  "功能名称": "",
-  "事件类型": "",
-  "埋点中文名": "",
-  "埋点英文名": "",
-  "埋点描述": "",
-  "主被动": "",
-  "标签": "",
-  "verdict": "PASS",
-  "violations": [
+  "batch_id": "batchX",
+  "items": [
     {
-      "severity": "MUST|FORBIDDEN|WARN",
-      "rule_id": "M01/F01/...",
-      "field": "字段名",
-      "original_value": "",
-      "suggested_value": "",
-      "reason": "命中原因"
+      "埋点id": "",
+      "页面位置": "",
+      "功能名称": "",
+      "事件类型": "",
+      "埋点中文名": "",
+      "埋点英文名": "",
+      "埋点描述": "",
+      "主被动": "",
+      "标签": ""
     }
   ]
 }
 ```
+
+- 兼容旧结构：若输入包含 `governed_output`，以 `governed_output` 作为待校验对象。
+
+## 输出格式（必须）
+
+默认输出批次 JSON，多个埋点必须用 `items` 数组封装。
+
+```json
+{
+  "batch_id": "batchX",
+  "items": [
+    {
+      "埋点id": "",
+      "页面位置": "",
+      "功能名称": "",
+      "事件类型": "",
+      "埋点中文名": "",
+      "埋点英文名": "",
+      "埋点描述": "",
+      "主被动": "",
+      "标签": "",
+      "verdict": "PASS",
+      "violations": [
+        {
+          "severity": "MUST|FORBIDDEN|WARN",
+          "rule_id": "M01/F01/...",
+          "field": "字段名",
+          "original_value": "",
+          "suggested_value": "",
+          "reason": "命中原因"
+        }
+      ]
+    }
+  ]
+}
+```
+
+若输入为单条，也可以输出单条对象；但在批处理流水线中，优先使用 `items` 封装格式。
 
 ## 结论分级
 
