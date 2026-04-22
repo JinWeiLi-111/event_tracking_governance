@@ -9,9 +9,10 @@
 ## 强约束
 
 1. 严格遵循文档顺序：`AGENT.md` -> `docs/background.md` -> `docs/workflow.md` -> `docs/domain_scenarios.md`，需要语义解释时可参考 `docs/domain_scenarios.md`。
-2. 不输出 PASS/WARN/FAIL 结论。
-3. 不新增输入和需求文档之外的业务事实。
-4. 信息不足必须显式标注，不允许臆造。
+2. 上面的markdown文档你必须完全读取，尤其是需要把`docs/domain_scenarios.md`中的索引表缓存到记忆中。
+3. 不输出 PASS/WARN/FAIL 结论。
+4. 不新增输入和需求文档之外的业务事实。
+5. 信息不足必须显式标注，不允许臆造。
 
 ## 输入
 
