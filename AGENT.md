@@ -1,44 +1,60 @@
-# BOSS 直聘存量埋点治理（双 Agent 协作总入口）
+# BOSS 直聘存量埋点治理（Agent 工具入口）
 
-## 项目目标
+## 1) 本文件职责（必须先读）
 
-围绕 BOSS 直聘存量历史埋点治理场景，对历史埋点元数据进行补全、归一和最终门禁校验，确保结果可复核、可追踪、可落库。
+`AGENT.md` 是系统级调度入口，不承载具体规则细节，只负责：
 
-## 协作模式（核心）
+- 定义 Agent A / Agent B 的职责边界。
+- 提供“触发条件 -> 必读文档 -> 输入输出契约”的索引。
+- 规定冲突优先级、回退策略和重试闭环。
 
-本项目采用双 Agent 协作，不再使用“单 Agent 既治理又校验”的模式。
+任何 Agent 会话都必须先读取本文件，再按角色进入对应工具文档。
 
-- Agent A（治理执行）：
-  - 负责字段补全、归一化、依据说明输出。
-  - 不输出 PASS/WARN/FAIL 最终结论。
-- Agent B（最终校验）：
-  - 负责门禁规则审查、结论分级、失败打回。
-  - 不臆造新业务事实，不做风格化润色。
+## 2) 文档分层（单一真源）
 
-## 通用工作边界
+### 系统层
 
-两个 Agent 均仅基于以下信息进行处理：
+- `AGENT.md`：协作协议、调度顺序、优先级。
 
-1. 埋点携带的基础属性（字段范围固定）：
-  - 埋点id
-  - 页面位置
-  - 功能名称
-  - 事件类型
-  - 埋点中文名
-  - 埋点英文名
-  - 埋点描述
-  - 主被动
-  - 标签
-2. 与该埋点绑定的需求文档（若有）
+### 契约层（Agent 间数据协议）
 
-两个 Agent 均不得：
+- `contracts/handoff_schema.md`：Agent A -> Agent B 交接输入输出格式（含必填字段、校验结论结构）。
 
-- 新增超出输入范围的业务事实
-- 基于未提供的外部信息做结论
+### Agent 工具层（角色入口）
 
-## 输入与输出定义
+- `agents/agent_a_governance.md`：Agent A 触发条件、输入格式、输出格式、调用步骤。
+- `agents/agent_b_validation.md`：Agent B 触发条件、输入格式、输出格式、门禁执行方式。
 
-输入可为单条 JSON 或批次 JSON（`items` 数组），字段通常包含：
+### 流程层
+
+- `workflows/workflow.md`：字段治理流程（按步骤调用知识层文档）。
+
+### 知识层（按需检索）
+
+- `knowledge/domain_scenarios.md`：场景命中与归一卡片。
+- `knowledge/validation_rules.md`：Must/Forbidden 校验规则与结论分级。
+
+### 背景层（可选）
+
+- `docs/background.md`：背景动机，不可替代流程/规则/契约。
+
+## 3) Agent 职责边界（强约束）
+
+### Agent A（治理执行）
+
+- 负责字段补全、归一、依据说明。
+- 不输出最终 `PASS/WARN/FAIL` 结论。
+- 输出必须符合 `contracts/handoff_schema.md` 的 A 侧结构。
+
+### Agent B（最终校验）
+
+- 负责门禁校验与原地修正，输出修正后的同构结果。
+- 不臆造新业务事实，不做风格化润色。
+- 输入必须是符合 `contracts/handoff_schema.md` 的 A 侧产物。
+
+## 4) 统一输入范围（强约束）
+
+仅允许使用以下字段和附加资料：
 
 - 埋点id
 - 页面位置
@@ -51,69 +67,49 @@
 - 标签
 - 需求文档信息（若有）
 
-输出按 Agent 角色区分：
+禁止：
 
-- Agent A 输出：治理结果 + 字段依据 + 不确定项（见 `agents/contracts/handoff_schema.md`）
-- Agent B 输出：`PASS/WARN/FAIL` + 违规证据 + 修复建议
+- 新增输入与需求文档之外的业务事实。
+- 基于外部未提供信息做结论。
 
-## 文档职责分工（单一真源）
+## 5) 读取隔离与触发（必须遵循）
 
-- `AGENT.md`：
-  - 定义双 Agent 协作边界、调度顺序、冲突优先级和回退原则。
-- `agents/prompts/agent_a_governance.md`：
-  - Agent A 角色入口与输出格式要求。
-- `agents/prompts/agent_b_validation.md`：
-  - Agent B 角色入口与校验输出格式要求。
-- `docs/workflow.md`：
-  - 字段级处理流程与补全步骤（严格按照此工作流程进行埋点各字段规范化）。
-- `docs/domain_scenarios.md`：
-  - 特定业务场景命中条件与归一目标。
-- `docs/validation_rules.md`：
-  - 最终门禁校验规则（Must/Forbidden、PASS/WARN/FAIL）。
-- `docs/background.md`：
-  - 治理背景与规范动机，仅用于背景理解。
+1. 任一 Agent 会话先读 `AGENT.md`。
+2. 触发 Agent A 时，仅允许继续读取：
+   - `agents/agent_a_governance.md`
+   - `workflows/workflow.md`
+   - `knowledge/domain_scenarios.md`
+   - `contracts/handoff_schema.md`
+   - `docs/background.md`（可选）
+   - `configs/` 下枚举文件
+3. 触发 Agent B 时，仅允许继续读取：
+   - `agents/agent_b_validation.md`
+   - `knowledge/validation_rules.md`
+   - `contracts/handoff_schema.md`
+   - `docs/background.md`（可选）
+   - `configs/` 下枚举文件
+4. 同一会话禁止同时读取两个 Agent 主文档，避免角色混叠。
 
-## 读取隔离规则（必须遵循）
+## 6) 闭环调度顺序（必须遵循）
 
-为避免角色混叠和确认偏差，必须遵循以下规则：
+1. Agent A 按 `agents/agent_a_governance.md` + `workflows/workflow.md` 执行治理。
+2. Agent A 输出按 `contracts/handoff_schema.md` 交接给 Agent B。
+3. Agent B 按 `agents/agent_b_validation.md` + `knowledge/validation_rules.md` 完成校验并原地修正。
+4. Agent B 对修正结果执行全量复校后输出同构结果。
+5. 必要时输出独立审计 sidecar，用于追溯修正依据。
 
-1. 任一单独 Agent 会话都必须先读取 `AGENT.md`。
-2. Agent A 会话只允许额外读取：
-  - `agents/prompts/agent_a_governance.md`
-  - `docs/workflow.md`
-  - `docs/domain_scenarios.md`
-  - `docs/background.md`
-  - `configs文件夹中的全部辅助文件`
-3. Agent B 会话只允许额外读取：
-  - `agents/prompts/agent_b_validation.md`
-  - `docs/validation_rules.md`
-  - `docs/background.md`
-  - `configs文件夹中的全部辅助文件`
-4. 禁止同一会话同时读取 `agent_a_governance.md` 与 `agent_b_validation.md`。
+## 7) 规则冲突优先级
 
-## 文档调度顺序（必须遵循）
+当多文档冲突时，优先级从高到低：
 
-每条埋点或每个批次按以下闭环执行：
+1. `knowledge/validation_rules.md`
+2. `contracts/handoff_schema.md`
+3. `workflows/workflow.md`
+4. `knowledge/domain_scenarios.md`
+5. `docs/background.md`
 
-1. Agent A 读取 A 侧文档并产出治理结果。
-2. Agent A 输出按 `agents/contracts/handoff_schema.md` 交接给 Agent B。
-3. Agent B 读取 B 侧文档并执行门禁校验，输出 PASS/WARN/FAIL。
-4. 若结论为 FAIL，打回 Agent A 修正后重新进入 Agent B 全量复校。
-5. 仅 PASS（或按策略允许的 WARN）结果可进入最终结果目录。
+## 8) 失败与回退策略
 
-## 冲突处理优先级（必须遵循）
-
-当多文档规则冲突时，优先级如下（高 -> 低）：
-
-1. `docs/validation_rules.md`（最终门禁）
-2. `docs/workflow.md`（字段流程）
-3. `docs/domain_scenarios.md`（场景归一）
-4. `docs/background.md`（背景说明）
-
-## 失败与回退策略
-
-- 命中 FAIL 时，禁止直接输出最终结果，必须修正后重跑全量校验。
-- 若场景冲突无法判定，采用保守策略（不臆造页面位置，事件类型可降级为“其他”）。
-- 任何自动修正必须保留可解释依据（命中规则、原值、修正值）。
-- 最终目录仅接收通过校验的可追踪结果。
-
+- Agent B 发现问题时优先原地修正，不中断主输出结构。
+- 场景冲突无法判定时，采用保守策略：不臆造页面位置，事件类型可降级为“其他”。
+- 自动修正必须可追溯：记录规则 ID、原值、新值、修正理由（建议写入 sidecar）。

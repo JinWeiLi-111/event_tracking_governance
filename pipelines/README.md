@@ -14,15 +14,14 @@
 1. 准备输入：
    - 将待治理数据放入 `workspace/input/`。
 2. 运行 Agent A：
-   - 使用 `agents/prompts/agent_a_governance.md`。
+   - 使用 `agents/agent_a_governance.md`。
    - 输出到 `workspace/agent_a_output/`，每条记录保持七字段扁平结构。
 3. 运行 Agent B：
-   - 使用 `agents/prompts/agent_b_validation.md`。
-   - 输入为 A 输出，结果落到 `workspace/agent_b_review/`（在扁平字段基础上追加 `verdict`、`violations`）。
-4. 处理结论：
-   - `PASS`：复制到 `workspace/final/`。
-   - `WARN`：记录风险后按流程决定是否放行。
-   - `FAIL`：返回 Agent A 修复并重跑 Agent B。
+   - 使用 `agents/agent_b_validation.md`。
+   - 输入为 A 输出，校验中发现问题直接原地修正，输出仍为扁平同构字段结构。
+4. 产出结果：
+   - 将 B 修正后的结果写入 `workspace/agent_b_review/`。
+   - 通过流程策略可直接同步到 `workspace/final/`。
 
 ## 与现有脚本衔接
 

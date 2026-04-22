@@ -8,15 +8,16 @@
   - 负责字段补全、归一化、可解释依据输出。
   - 不输出最终 PASS/WARN/FAIL 结论。
 - Agent B（最终校验）：
-  - 负责门禁规则审查与结论输出。
+  - 负责门禁规则审查与原地修正输出。
   - 不臆造新业务事实，不做风格型润色。
 
 ## 子目录
 
-- `prompts/`：两个 Agent 的系统提示词模板。
-- `contracts/`：A 到 B 的交接数据契约。
+- `agent_a_governance.md`：Agent A 主文档（触发条件、输入输出、调用步骤）。
+- `agent_b_validation.md`：Agent B 主文档（触发条件、输入输出、门禁执行）。
+- `prompts/`：旧路径兼容入口（已迁移，请勿作为真源）。
 
 ## 读取顺序建议
 
-1. Agent A 读取：`AGENT.md` -> `docs/workflow.md` -> `docs/domain_scenarios.md`。
-2. Agent B 读取：`AGENT.md` -> `docs/validation_rules.md` -> `configs/hard_constraints.json`（若存在）。
+1. Agent A 读取：`AGENT.md` -> `agents/agent_a_governance.md` -> `workflows/workflow.md` -> `knowledge/domain_scenarios.md`。
+2. Agent B 读取：`AGENT.md` -> `agents/agent_b_validation.md` -> `knowledge/validation_rules.md` -> `contracts/handoff_schema.md`。

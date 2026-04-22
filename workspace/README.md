@@ -6,7 +6,7 @@
 
 - `input/`：待处理输入。
 - `agent_a_output/`：治理结果（含字段依据）。
-- `agent_b_review/`：校验结论（PASS/WARN/FAIL）。
+- `agent_b_review/`：校验并原地修正后的同构结果。
 - `final/`：通过校验可落库结果。
 
 ## 命名建议
@@ -19,5 +19,5 @@
 ## 流转原则
 
 1. 不跳过 Agent B，不直接把 A 输出当最终结果。
-2. Agent B 为 FAIL 时，必须回流到 A 修复后再次校验。
-3. `final/` 目录中的文件应全部可追溯到对应 review 文件。
+2. Agent B 在校验中发现问题应直接原地修正并复校。
+3. `final/` 目录中的文件应全部可追溯到对应 review 文件（可选 sidecar 审计）。
