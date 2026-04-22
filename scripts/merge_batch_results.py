@@ -52,12 +52,12 @@ def main() -> None:
     )
     parser.add_argument(
         "--input-dir",
-        default="workspace/agent_b_review",
+        default="workspace/turn_2/agent_b_review",
         help="Directory containing batch*_review.json files.",
     )
     parser.add_argument(
         "--output-file",
-        default="workspace/final/all_batches_result.json",
+        default="workspace/turn_2/final/all_batches_result.json",
         help="Output merged JSON file path.",
     )
     args = parser.parse_args()

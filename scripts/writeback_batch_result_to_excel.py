@@ -24,6 +24,15 @@ def is_null(value):
     return False
 
 
+def normalize_id(value):
+    if is_null(value):
+        return None
+    # Excel numeric cells are often parsed as float (e.g. 12345.0).
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value).strip()
+
+
 def load_batch_result(result_json_path):
     with open(result_json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -32,10 +41,10 @@ def load_batch_result(result_json_path):
     for it in items:
         if not isinstance(it, dict):
             continue
-        k = it.get("埋点id", None)
-        if is_null(k):
+        k = normalize_id(it.get("埋点id", None))
+        if k is None:
             continue
-        by_id[str(k)] = it
+        by_id[k] = it
     return by_id
 
 
@@ -65,6 +74,14 @@ def writeback_excel(excel_path, result_json_path, output_excel_path):
     if "操作人" not in df.columns:
         df["操作人"] = "NULL"
 
+    # Ensure writeback columns can hold string values; otherwise pandas may keep float dtype
+    # and fail when assigning values such as "无页面位置".
+    for excel_col in columns_mapping.keys():
+        if excel_col == "id":
+            continue
+        df[excel_col] = df[excel_col].astype("object")
+    df["操作人"] = df["操作人"].astype("object")
+
     by_id = load_batch_result(result_json_path)
 
     updated = 0
@@ -77,10 +94,10 @@ def writeback_excel(excel_path, result_json_path, output_excel_path):
             skipped_has_operator += 1
             continue
 
-        excel_id = row.get("id", None)
-        if is_null(excel_id):
+        excel_id = normalize_id(row.get("id", None))
+        if excel_id is None:
             continue
-        key = str(excel_id)
+        key = excel_id
         result = by_id.get(key, None)
         if result is None:
             not_found += 1
@@ -114,9 +131,9 @@ def writeback_excel(excel_path, result_json_path, output_excel_path):
 
 if __name__ == "__main__":
     # 支持命令行参数：excel_path result_json_path output_excel_path
-    excel_path = "TOP埋点治理记录_副本.xlsx"
-    result_json_path = "workspace/final/all_batches_result.json"
-    output_excel_path = "TOP埋点治理记录_副本_1.xlsx"
+    excel_path = "埋点100_v2.xlsx"
+    result_json_path = "workspace/turn_2/final/all_batches_result.json"
+    output_excel_path = "埋点100_v2_1.xlsx"
 
     if len(sys.argv) >= 2:
         excel_path = sys.argv[1]

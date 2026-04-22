@@ -16,6 +16,10 @@
                 "cn_name" : "C_注册"
             },
             {
+                "location_name" : "完善",
+                "cn_name" : "C_完善"
+            },
+            {
                 "location_name" : "个人雇主B",
                 "cn_name" : "C_个人雇主B"
             },
@@ -338,6 +342,18 @@
                 ]
             },
             {
+                "location_name" : "完善",
+                "cn_name" : "C_完善"
+            },
+            {
+                "location_name" : "登录",
+                "cn_name" : "C_登录"
+            },
+            {
+                "location_name" : "注册",
+                "cn_name" : "C_注册"
+            },
+            {
                 "location_name" : "账号与安全中心",
                 "cn_name" : "C_账号与安全中心",
                 "children" : [
@@ -443,6 +459,18 @@
         "location_name" : "小程序_C",
         "cn_name" : "C",
         "children" : [
+            {
+                "location_name" : "完善",
+                "cn_name" : "C_完善"
+            },
+            {
+                "location_name" : "登录",
+                "cn_name" : "C_登录"
+            },
+            {
+                "location_name" : "注册",
+                "cn_name" : "C_注册"
+            },
             {
                 "location_name" : "我的",
                 "cn_name" : "C_我的",
@@ -1043,6 +1071,18 @@
         "location_name" : "Web_B",
         "cn_name" : "B",
         "children" : [
+            {
+                "location_name" : "完善",
+                "cn_name" : "B_完善"
+            },
+            {
+                "location_name" : "登录",
+                "cn_name" : "B_登录"
+            },
+            {
+                "location_name" : "注册",
+                "cn_name" : "B_注册"
+            },
             {
                 "location_name" : "职位管理",
                 "cn_name" : "B_职位管理",
