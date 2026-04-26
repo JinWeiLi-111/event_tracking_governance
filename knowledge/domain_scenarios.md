@@ -51,17 +51,21 @@
 
 | 场景ID | 主要触发信号 | 归一核心 |
 | --- | --- | --- |
-| `SCN_LIST_REFRESH_RECOMMEND` | `英文名` 以 `list` 开头，或 `描述` 含“刷新列表/下拉刷新/重新拉取列表” | `事件类型=浏览`，功能归一为“推荐列表刷新” |
+| `SCN_LIST_REFRESH_RECOMMEND` | `英文名` 以 `list` 开头，或 `描述` 含“刷新列表/下拉刷新/重新拉取列表” | 功能名称归一为“推荐列表刷新”，`事件类型=浏览`，如果英文名称中出现'use'动词，就选为``|
 | `SCN_SEARCH_RESULT_BROWSE` | `英文名` 含 `search/result_list` 且 `描述` 含“搜索结果/检索结果” | `事件类型=浏览`，功能归一为“搜索结果列表查看” |
 | `SCN_DETAIL_PAGE` | `英文名` 以 `detail` 开头 | `事件类型=点击`，功能归一为“查看xx详情页” |
 | `SCN_JOB_PUBLISH_OR_CHANGE_GOVERN` | 字段语义命中“B端职位发布/修改管理” | 仅可落 B 端职位相关页面 |
 | `SCN_EXPECT_JOB_PUBLISH_OR_CHANGE_GOVERN` | 字段语义命中“C端期望职位发布/修改管理” | 仅可落 C 端职位相关页面 |
-| `SCN_EXCHANGE_PHONE` | 字段中出现“交换电话”语义 | `事件类型=点击`，功能“交换电话” |
+| `SCN_EXCHANGE_PHONE` | 字段中出现“交换电话”语义 | `事件类型=点击`，功能名称选择为“交换电话” |
 | `SCN_BIZ_OR_BLOCK` | `英文名` 含 `block`，且中文名/描述含商业阻断词 | 页面优先阻断相关位置 |
 | `SCN_READ_MESSAGES` | `英文名` 含 `read`，且中文名/描述含“已读” | `事件类型=浏览`，功能“已读消息” |
 | `SCN_ITEM_TOOL` | 任一字段命中 `B_items/C_items` 道具名 | 功能保留道具语义，页面优先道具路径 |
 | `SCN_LOGIN_OR_SIGNUP` | 任一字段命中“注册/登录/启动” | 页面位置选择登录注册启动相关 |
 | `SCN_ITEM_AI_ASSITANT` | 任一字段命中“AI 沟通助手”语义 | 页面位置优先道具相关 |
+| `SCN_Boss_OR_Geek_BG`  | bg字段命中`boss`,`geek`    | 命中boss，则页面位置优先考虑B端的相关页面，如果命中geek，页面位置优先考虑C端的页面。 | 
+| `SCN_CV_RESUME`   | 中文名称字段命中`直聘简历`    | 不处理这个埋点，原封不动返回即可 |
+| `SCN_JOB_MANAGEMENT` | 中文名称字段命中`编辑职位`,`发布职位`,`关闭职位`,`开放职位`  |  页面位置只能选择职位管理相关页面。除非发布职位和完善、首善、同时出现才选择完善/发布职位这个页面。 |
+| `SCN_CUSTOMER_SUPPORT` | 任一字段命中`智慧石`  | 页面位置选择/Web_B/我的客服 | 
 
 ## 6) 场景卡片（执行区）
 
