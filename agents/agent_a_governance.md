@@ -16,9 +16,10 @@
 
 1. `AGENT.md`
 2. `workflows/workflow.md`
-3. `knowledge/domain_scenarios.md`
-4. `contracts/handoff_schema.md`
-5. `docs/background.md`（可选，仅用于背景理解）
+3. `knowledge/common_rules.md`
+4. `knowledge/domain_scenarios.md`
+5. `contracts/handoff_schema.md`
+6. `docs/background.md`（可选，仅用于背景理解）
 
 ## 3) 输入格式（Input Contract）
 

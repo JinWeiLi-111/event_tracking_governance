@@ -1,0 +1,100 @@
+{
+  "title": "Agent A and Agent B Handoff Batch",
+  "description": "Machine-checkable schema for the fixed nine-field tracking governance output.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "items"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "埋点id",
+        "页面位置",
+        "功能名称",
+        "事件类型",
+        "埋点中文名",
+        "埋点英文名",
+        "埋点描述",
+        "主被动",
+        "标签"
+      ],
+      "properties": {
+        "埋点id": {
+          "type": "string"
+        },
+        "页面位置": {
+          "type": "string"
+        },
+        "功能名称": {
+          "type": "string"
+        },
+        "事件类型": {
+          "type": "string",
+          "enum": [
+            "点击",
+            "曝光",
+            "浏览",
+            "时长",
+            "性能",
+            "其他"
+          ]
+        },
+        "埋点中文名": {
+          "type": "string"
+        },
+        "埋点英文名": {
+          "type": "string"
+        },
+        "埋点描述": {
+          "type": "string"
+        },
+        "主被动": {
+          "type": "string",
+          "enum": [
+            "主动",
+            "被动"
+          ]
+        },
+        "标签": {
+          "type": "string"
+        }
+      },
+      "not": {
+        "anyOf": [
+          {
+            "required": [
+              "verdict"
+            ]
+          },
+          {
+            "required": [
+              "violations"
+            ]
+          },
+          {
+            "required": [
+              "repair_suggestions"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

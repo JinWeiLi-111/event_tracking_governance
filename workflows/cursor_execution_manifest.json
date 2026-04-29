@@ -1,0 +1,155 @@
+{
+  "version": "1.0",
+  "purpose": "Machine-readable routing manifest for Cursor to execute the fixed BOSS tracking governance workflow.",
+  "mandatory_entry": [
+    "AGENT.md",
+    "workflows/cursor_execution_manifest.json"
+  ],
+  "role_selection": {
+    "single_role_default": true,
+    "no_mixed_role_reads": [
+      "agents/agent_a_governance.md",
+      "agents/agent_b_validation.md"
+    ],
+    "end_to_end_allowed_only_when_user_requests_pipeline": true
+  },
+  "roles": {
+    "agent_a": {
+      "name": "governance_execution",
+      "triggers": [
+        "补全埋点字段",
+        "归一化埋点字段",
+        "历史埋点治理",
+        "生成 Agent B 可消费的治理产物",
+        "agent a",
+        "governed output"
+      ],
+      "required_reads": [
+        "AGENT.md",
+        "agents/agent_a_governance.md",
+        "workflows/workflow.md",
+        "knowledge/common_rules.md",
+        "knowledge/domain_scenarios.md",
+        "contracts/handoff_schema.md"
+      ],
+      "optional_reads": [
+        "docs/background.md"
+      ],
+      "enum_reads": [
+        "configs/enums/page_locations.json",
+        "configs/enums/tags.json",
+        "configs/enums/B_items.json",
+        "configs/enums/C_items.json"
+      ],
+      "steps": [
+        "parse_input_json",
+        "check_record_fields",
+        "normalize_description",
+        "match_domain_scenario",
+        "normalize_page_location_from_enum",
+        "normalize_feature_name",
+        "normalize_event_type",
+        "compose_chinese_name",
+        "normalize_english_name",
+        "normalize_active_passive",
+        "normalize_tags",
+        "assemble_agent_a_output",
+        "write_optional_audit_sidecar"
+      ],
+      "main_output_contract": "contracts/handoff_schema.md#AgentAOutput",
+      "forbidden_outputs": [
+        "PASS",
+        "WARN",
+        "FAIL",
+        "verdict",
+        "violations",
+        "repair_suggestions"
+      ]
+    },
+    "agent_b": {
+      "name": "validation_and_final_correction",
+      "triggers": [
+        "门禁校验",
+        "校验 Agent A 产物",
+        "原地修正",
+        "最终同构结果",
+        "agent b",
+        "review output"
+      ],
+      "required_reads": [
+        "AGENT.md",
+        "agents/agent_b_validation.md",
+        "contracts/handoff_schema.md",
+        "knowledge/validation_rules.md"
+      ],
+      "optional_reads": [
+        "docs/background.md",
+        "examples/negative_examples.md",
+        "examples/golden_cases.json"
+      ],
+      "enum_reads": [
+        "configs/enums/page_locations.json",
+        "configs/enums/tags.json",
+        "configs/enums/B_items.json",
+        "configs/enums/C_items.json"
+      ],
+      "validation_sources": [
+        "knowledge/validation_rules.md",
+        "contracts/handoff_schema.json",
+        "workflows/workflow.md",
+        "knowledge/domain_scenarios.md"
+      ],
+      "steps": [
+        "parse_agent_a_output",
+        "unwrap_legacy_governed_output_if_present",
+        "validate_schema",
+        "run_must_rules",
+        "run_forbidden_rules",
+        "perform_minimal_in_place_corrections",
+        "revalidate_all_records",
+        "assemble_same_shape_agent_b_output",
+        "write_optional_audit_sidecar"
+      ],
+      "main_output_contract": "contracts/handoff_schema.md#AgentBOutput",
+      "forbidden_outputs": [
+        "verdict",
+        "violations",
+        "repair_suggestions"
+      ]
+    }
+  },
+  "record_fields": [
+    "埋点id",
+    "页面位置",
+    "功能名称",
+    "事件类型",
+    "埋点中文名",
+    "埋点英文名",
+    "埋点描述",
+    "主被动",
+    "标签"
+  ],
+  "conflict_priority": [
+    "knowledge/validation_rules.md",
+    "contracts/handoff_schema.md",
+    "workflows/workflow.md",
+    "knowledge/common_rules.md",
+    "knowledge/domain_scenarios.md",
+    "docs/background.md"
+  ],
+  "forbidden_behaviors": [
+    "Skip AGENT.md before role execution",
+    "Read both role documents during a single-role task",
+    "Invent page locations, tags, item names, or business facts",
+    "Change record field names",
+    "Append validation fields to main batch output",
+    "Use Chinese comma, enumeration comma, or whitespace as multi-value separators",
+    "Ignore enum JSON files when normalizing page locations or tags"
+  ],
+  "workspace_conventions": {
+    "inputs": "workspace/turn_*/input/*_input.json",
+    "agent_a_outputs": "workspace/turn_*/agent_a_output/*_governed.json",
+    "agent_b_outputs": "workspace/turn_*/agent_b_review/*_review.json",
+    "final_outputs": "workspace/turn_*/final/all_batches_result.json"
+  }
+}

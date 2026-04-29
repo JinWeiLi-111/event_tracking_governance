@@ -31,6 +31,7 @@
 
 ### 知识层（按需检索）
 
+- `knowledge/common_rules.md`：Agent A 通用规则与跨场景速查约束。
 - `knowledge/domain_scenarios.md`：场景命中与归一卡片。
 - `knowledge/validation_rules.md`：Must/Forbidden 校验规则与结论分级。
 
@@ -78,6 +79,7 @@
 2. 触发 Agent A 时，仅允许继续读取：
    - `agents/agent_a_governance.md`
    - `workflows/workflow.md`
+   - `knowledge/common_rules.md`
    - `knowledge/domain_scenarios.md`
    - `contracts/handoff_schema.md`
    - `docs/background.md`（可选）
@@ -105,8 +107,9 @@
 1. `knowledge/validation_rules.md`
 2. `contracts/handoff_schema.md`
 3. `workflows/workflow.md`
-4. `knowledge/domain_scenarios.md`
-5. `docs/background.md`
+4. `knowledge/common_rules.md`
+5. `knowledge/domain_scenarios.md`
+6. `docs/background.md`
 
 ## 8) 失败与回退策略
 

@@ -1,0 +1,35 @@
+---
+description: Fixed workflow for BOSS tracking governance
+alwaysApply: true
+---
+
+# BOSS Tracking Governance Workflow
+
+This repository is a fixed, document-driven workflow. Do not improvise the execution path.
+
+## Mandatory Entry
+
+For any task about tracking governance, batch JSON processing, Agent A, Agent B, field normalization, validation, or enum references:
+
+1. Read `AGENT.md` first.
+2. Read `workflows/cursor_execution_manifest.json` second.
+3. Select exactly one role path unless the user explicitly asks for end-to-end orchestration:
+   - Agent A: governance, field completion, normalization.
+   - Agent B: validation, minimal in-place correction, final same-shape output.
+4. Follow the selected role's `required_reads` in manifest order.
+
+## Hard Constraints
+
+- Do not mix `agents/agent_a_governance.md` and `agents/agent_b_validation.md` in the same role execution.
+- Do not skip `contracts/handoff_schema.md` when reading or writing `workspace/**/*.json`.
+- Do not add business facts that are not present in the input or supplied requirement documents.
+- Do not invent enum values. Page locations and tags must come from `configs/enums/*.json` or documented fallbacks.
+- Main batch outputs must preserve the nine-field record shape and must not add `verdict`, `violations`, or `repair_suggestions`.
+- If rules conflict, use the `conflict_priority` from `workflows/cursor_execution_manifest.json`.
+
+## File Handling
+
+- Treat `workspace/turn_*/input/*_input.json` as source inputs.
+- Treat `workspace/turn_*/agent_a_output/*_governed.json` as Agent A outputs.
+- Treat `workspace/turn_*/agent_b_review/*_review.json` as Agent B outputs.
+- Treat `configs/enums/*.json` as canonical reference data.
